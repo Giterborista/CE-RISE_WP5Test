@@ -56,6 +56,7 @@ if [[ ! -f "${SEED_READY}" ]]; then
     if [[ "${SEED_URL}" != http://* && "${SEED_URL}" != https://* ]]; then
       echo "[render-start] WARNING: CERISE_SEED_URL is set but invalid: '${SEED_URL}'"
       echo "[render-start] Falling back to bootstrap mode."
+      mkdir -p "${BW_DIR}"
     else
       rm -rf "${BW_DIR}"
       mkdir -p "${BW_DIR}"
@@ -92,6 +93,9 @@ if [[ ! -f "${SEED_READY}" ]]; then
     touch "${SEED_READY}"
   fi
 fi
+
+# Safety guard: BRIGHTWAY2_DIR must exist before bw2data import.
+mkdir -p "${BW_DIR}"
 
 if [[ "${SEED_OK}" = "1" ]]; then
   export CERISE_FIXED_PROJECT="${PROJECT_NAME}"
