@@ -36,14 +36,18 @@ fi
 
 if [[ ! -f "${SEED_READY}" ]]; then
   echo "[render-start] Preparing Brightway runtime in ${BW_DIR}"
-  rm -rf "${BW_DIR}"
-  mkdir -p "${BW_DIR}"
-
+  # Only wipe/rebuild when we actually have a seed source to extract.
+  # In bootstrap mode (no seed), preserve existing runtime data to avoid
+  # repeated heavy re-imports after service restarts.
   if [[ -f "${SEED_TAR_GZ}" ]]; then
+    rm -rf "${BW_DIR}"
+    mkdir -p "${BW_DIR}"
     echo "[render-start] Extracting seed archive: ${SEED_TAR_GZ}"
     tar -xzf "${SEED_TAR_GZ}" -C "${BW_DIR}"
     SEED_OK=1
   elif [[ -f "${SEED_TAR_ZST}" ]]; then
+    rm -rf "${BW_DIR}"
+    mkdir -p "${BW_DIR}"
     echo "[render-start] Extracting seed archive: ${SEED_TAR_ZST}"
     tar --zstd -xf "${SEED_TAR_ZST}" -C "${BW_DIR}"
     SEED_OK=1
@@ -53,6 +57,8 @@ if [[ ! -f "${SEED_READY}" ]]; then
       echo "[render-start] WARNING: CERISE_SEED_URL is set but invalid: '${SEED_URL}'"
       echo "[render-start] Falling back to bootstrap mode."
     else
+      rm -rf "${BW_DIR}"
+      mkdir -p "${BW_DIR}"
       rm -f "${SEED_DL}"
       if curl -fL --retry 3 --retry-delay 2 "${SEED_URL}" -o "${SEED_DL}"; then
         echo "[render-start] Extracting downloaded seed archive"
@@ -72,8 +78,14 @@ if [[ ! -f "${SEED_READY}" ]]; then
       rm -f "${SEED_DL}"
     fi
   else
+    mkdir -p "${BW_DIR}"
     echo "[render-start] WARNING: no seed archive found and CERISE_SEED_URL is empty."
     echo "[render-start] Falling back to bootstrap mode (project can be created/imported from UI)."
+    if [[ -f "${BW_DIR}/projects.db" ]]; then
+      echo "[render-start] Reusing existing bootstrap Brightway data at ${BW_DIR}"
+    else
+      echo "[render-start] No existing bootstrap data found; first setup will import databases."
+    fi
   fi
 
   if [[ "${SEED_OK}" = "1" ]]; then
