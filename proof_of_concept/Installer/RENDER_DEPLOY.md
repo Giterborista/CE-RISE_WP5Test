@@ -36,6 +36,15 @@ The seed archive must contain a ready Brightway directory with:
 - Calculation path never creates projects or imports BONSAI during requests.
 - If the seed is missing/incomplete, setup and calculation will fail fast with a clear error.
 
+### Fallback behavior (no seed)
+
+If no local seed archive is present and `CERISE_SEED_URL` is empty, `render_start.sh` now automatically falls back to bootstrap mode:
+
+- fixed-project mode is disabled
+- project creation/import is allowed via UI setup flow
+
+This keeps the app usable, but it is not the stable stateless mode.
+
 ## Build a seed archive locally (recommended)
 
 Use a clean Brightway directory with only one project to keep archive size smaller.
