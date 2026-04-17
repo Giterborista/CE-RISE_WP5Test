@@ -5,6 +5,7 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 BW_DIR="${CERISE_BW_DIR:-/tmp/brightway}"
 PROJECT_NAME="${CERISE_FIXED_PROJECT:-render-seed}"
 PORT_VALUE="${PORT:-10000}"
+SEED_URL="${CERISE_SEED_URL:-}"
 
 export CERISE_FIXED_PROJECT="${PROJECT_NAME}"
 export CERISE_DISABLE_BOOTSTRAP=1
@@ -14,6 +15,7 @@ export BW2_DIR="${BW_DIR}"
 SEED_READY="${BW_DIR}/.seed.ready"
 SEED_TAR_GZ="${ROOT_DIR}/Installer/brightway_seed.tar.gz"
 SEED_TAR_ZST="${ROOT_DIR}/Installer/brightway_seed.tar.zst"
+SEED_DL="${ROOT_DIR}/Installer/.seed_download.tar"
 
 if [[ ! -f "${SEED_READY}" ]]; then
   echo "[render-start] Preparing Brightway runtime in ${BW_DIR}"
@@ -26,8 +28,23 @@ if [[ ! -f "${SEED_READY}" ]]; then
   elif [[ -f "${SEED_TAR_ZST}" ]]; then
     echo "[render-start] Extracting seed archive: ${SEED_TAR_ZST}"
     tar --zstd -xf "${SEED_TAR_ZST}" -C "${BW_DIR}"
+  elif [[ -n "${SEED_URL}" ]]; then
+    echo "[render-start] Downloading seed archive from CERISE_SEED_URL"
+    rm -f "${SEED_DL}"
+    curl -fL --retry 3 --retry-delay 2 "${SEED_URL}" -o "${SEED_DL}"
+    echo "[render-start] Extracting downloaded seed archive"
+    if [[ "${SEED_URL}" == *.tar.gz || "${SEED_URL}" == *.tgz ]]; then
+      tar -xzf "${SEED_DL}" -C "${BW_DIR}"
+    elif [[ "${SEED_URL}" == *.tar.zst || "${SEED_URL}" == *.tzst ]]; then
+      tar --zstd -xf "${SEED_DL}" -C "${BW_DIR}"
+    else
+      # Fallback: let tar autodetect when possible
+      tar -xf "${SEED_DL}" -C "${BW_DIR}"
+    fi
+    rm -f "${SEED_DL}"
   else
-    echo "[render-start] WARNING: no seed archive found in Installer/. Startup will fail unless project '${PROJECT_NAME}' already exists."
+    echo "[render-start] WARNING: no seed archive found and CERISE_SEED_URL is empty."
+    echo "[render-start] Startup will fail unless project '${PROJECT_NAME}' already exists."
   fi
 
   touch "${SEED_READY}"
