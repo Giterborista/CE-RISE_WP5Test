@@ -2265,23 +2265,9 @@ async function pollJob(jobId, label, timeoutMs=20*60*1000){
   }
 }
 
-function isJobNotFoundError(msg){
-  const m = String(msg || '');
-  return m.includes("Job '") && m.includes("not found");
-}
-
 async function startAndPollWithOneRecovery(startUrl, payload, label){
   const started = await postJson(startUrl, payload);
-  try {
-    return await pollJob(started.jobId, label);
-  } catch (e) {
-    const msg = String(e?.message || e);
-    if (!isJobNotFoundError(msg)) throw e;
-    setStatus('warn', `${label} job was lost after a service restart. Resubmitting once...`);
-    await sleep(1200);
-    const restarted = await postJson(startUrl, payload);
-    return await pollJob(restarted.jobId, label);
-  }
+  return await pollJob(started.jobId, label);
 }
 
 function renderTable(rows){
