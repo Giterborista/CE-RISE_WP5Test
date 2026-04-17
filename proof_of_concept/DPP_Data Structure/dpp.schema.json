@@ -1,0 +1,426 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cerise-pef.example/schemas/dpp.schema.json",
+  "title": "DPP Primary LCI Carrier",
+  "description": "Primary actor-reported inventory carrier for CE-RISE DPP workflows. Contains activities, flows, and flow objects only. FU/study settings are external.",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "required": [
+    "schemaVersion",
+    "dppId",
+    "updatedAt",
+    "actors",
+    "flowObjects",
+    "activities"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "dppId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "actors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/Actor"
+      }
+    },
+    "flowObjects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/FlowObject"
+      }
+    },
+    "activities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/Activity"
+      }
+    },
+    "demandRules": {
+      "$ref": "#/$defs/DemandRules"
+    },
+    "vocabularyPacks": {
+      "type": "object",
+      "description": "Optional metadata about vocabulary pack versions used while filling this DPP",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "Actor": {
+      "type": "object",
+      "unevaluatedProperties": false,
+      "required": [
+        "actorId",
+        "role"
+      ],
+      "properties": {
+        "actorId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "Location": {
+      "type": "object",
+      "unevaluatedProperties": false,
+      "required": [
+        "countryCode"
+      ],
+      "properties": {
+        "countryCode": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 3
+        },
+        "countryName": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        }
+      }
+    },
+    "ActivityType": {
+      "type": "object",
+      "unevaluatedProperties": false,
+      "required": [
+        "id",
+        "label"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "LCStage": {
+      "type": "object",
+      "unevaluatedProperties": false,
+      "required": [
+        "id",
+        "label"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "FlowObject": {
+      "type": "object",
+      "unevaluatedProperties": false,
+      "required": [
+        "flowObjectId",
+        "name",
+        "objectClass"
+      ],
+      "properties": {
+        "flowObjectId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "objectClass": {
+          "type": "string",
+          "enum": [
+            "primary",
+            "secondary",
+            "elementary"
+          ]
+        },
+        "classification": {
+          "type": "string"
+        },
+        "bonsaiProcess": {
+          "type": "string",
+          "description": "Legacy optional display/process metadata. Strict BONSAI routing is carried on Flow.bonsaiProcess and Flow.bonsaiCode."
+        },
+        "ef31FlowId": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "Flow": {
+      "type": "object",
+      "unevaluatedProperties": false,
+      "required": [
+        "flowId",
+        "flowObjectId",
+        "direction",
+        "amount",
+        "unit"
+      ],
+      "properties": {
+        "flowId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "flowObjectId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "input",
+            "output"
+          ]
+        },
+        "amount": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "isDetermining": {
+          "type": "boolean",
+          "default": false
+        },
+        "flowType": {
+          "type": "string"
+        },
+        "upstreamActivityRef": {
+          "type": "string"
+        },
+        "backgroundHint": {
+          "type": "string"
+        },
+        "classification": {
+          "type": "string"
+        },
+        "bonsaiProcess": {
+          "type": "string",
+          "description": "User-facing BONSAI process description used for strict mapping"
+        },
+        "bonsaiCode": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_]+\\|[^|]+$",
+          "description": "Exact BONSAI provider code selected at authoring time, including location segment."
+        },
+        "evidenceMethod": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "sourceLocation": {
+          "type": "string"
+        },
+        "emissionCompartment": {
+          "type": "string"
+        },
+        "wasteCode": {
+          "type": "string",
+          "pattern": "^[0-9]{6}\\*?$"
+        },
+        "wasteOperation": {
+          "type": "string",
+          "pattern": "^[RD](?:[1-9]|1[0-5])$"
+        }
+      }
+    },
+    "DemandRule": {
+      "type": "object",
+      "unevaluatedProperties": false,
+      "required": [
+        "activityId",
+        "baseDemand",
+        "perLoopDemand",
+        "unit",
+        "enabled"
+      ],
+      "properties": {
+        "activityId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "baseDemand": {
+          "type": "number",
+          "minimum": 0
+        },
+        "perLoopDemand": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "DemandRules": {
+      "type": "object",
+      "unevaluatedProperties": false,
+      "required": [
+        "mode",
+        "loopVariable",
+        "defaultLoopCount",
+        "activityRules"
+      ],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "loop-per-activity"
+          ]
+        },
+        "loopVariable": {
+          "type": "string",
+          "minLength": 1
+        },
+        "defaultLoopCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "activityRules": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/DemandRule"
+          }
+        }
+      },
+      "$comment": "Runtime validation should enforce one rule per activityId and ensure every rule points to an existing DPP activity."
+    },
+    "Activity": {
+      "type": "object",
+      "unevaluatedProperties": false,
+      "required": [
+        "activityId",
+        "name",
+        "activityType",
+        "lcStage",
+        "location",
+        "referenceYear",
+        "determiningFlowId",
+        "flows"
+      ],
+      "properties": {
+        "activityId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Annotation-compatible activity identifier (e.g., dcterms:identifier value)"
+        },
+        "activityType": {
+          "$ref": "#/$defs/ActivityType"
+        },
+        "lcStage": {
+          "$ref": "#/$defs/LCStage"
+        },
+        "location": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Location"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "referenceYear": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1900,
+              "maximum": 2100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "classification": {
+          "type": "string"
+        },
+        "determiningFlowId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "flows": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/Flow"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "properties": {
+            "flows": {
+              "contains": {
+                "type": "object",
+                "required": [
+                  "isDetermining",
+                  "direction"
+                ],
+                "properties": {
+                  "isDetermining": {
+                    "const": true
+                  },
+                  "direction": {
+                    "const": "output"
+                  }
+                }
+              },
+              "minContains": 1,
+              "maxContains": 1
+            }
+          }
+        },
+        {
+          "$comment": "Runtime semantic validation must enforce: determiningFlowId references an existing flow in this activity; that flow is output and uses a primary FlowObject; no other flow in this activity uses a primary FlowObject."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+./.gitignore
+./DPP_Data Structure/__pycache__/cerise_brightway.cpython-313.pyc
+./DPP_Data Structure/__pycache__/dpp_impact_calculator_online.cpython-313.pyc
+./DPP_Data Structure/__pycache__/dpp_live_form_minimal.cpython-313.pyc
+./DPP_Data Structure/cerise_brightway.py
+./DPP_Data Structure/dpp.schema.json
+./DPP_Data Structure/dpp_impact_calculator_online.py
+./DPP_Data Structure/dpp_live_form_minimal.py
+./DPP_Data Structure/examples/USEME.json
+./Installer/bundle_size.txt
+./Installer/bw2io_custom_snapshot.zip
+./Installer/bw2io_source_path.txt
+./Installer/check_runtime.py
+./Installer/conda_env_bw_no_builds.yml
+./Installer/file_manifest.txt
+./Installer/install_custom_bw2io.py
+./Installer/pip_freeze_bw.txt
+./Installer/python_and_key_package_versions.txt
+./Installer/requirements_core_reference.txt
+./README.md
+./User data inputs/Black ink printer cartridge manufacturing copy 2.xlsx
+./bonsai_files/extensions_value_table.gzip
+./bonsai_files/index_table_extensions.gzip
+./bonsai_files/index_table_hiot.gzip
+./bonsai_files/io_metadata.json
+./bonsai_files/product_value_table.gzip
+./bonsai_files/technosphere_value_table.gzip
+./dictionaries/dpp_dictionaries.json

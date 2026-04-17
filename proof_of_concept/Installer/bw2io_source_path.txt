@@ -1,0 +1,1 @@
+/opt/anaconda3/envs/bw/lib/python3.10/site-packages/bw2io

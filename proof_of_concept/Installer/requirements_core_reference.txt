@@ -1,0 +1,7 @@
+bw2data==4.5.1
+bw2calc==2.2.1
+bw2io==0.9.11
+peewee==3.17.9
+openpyxl==3.1.5
+matplotlib==3.10.7
+jsonschema==4.26.0

@@ -1,0 +1,569 @@
+{
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2026-03-16T09:49:00Z",
+  "dppId": "DPP_lexmark-cartridge-components_4855",
+  "flowObjects": [
+    {
+      "flowObjectId": "fo_p_derived-lexmark-2-cycles-bom",
+      "name": "1 C62 output from Raw material acquisition",
+      "objectClass": "primary"
+    },
+    {
+      "flowObjectId": "fo_s_m-chem",
+      "name": "chemicals nec",
+      "objectClass": "secondary"
+    },
+    {
+      "flowObjectId": "fo_s_m-plas",
+      "name": "plastics, basic",
+      "objectClass": "secondary"
+    },
+    {
+      "flowObjectId": "fo_s_m-rubp",
+      "name": "rubber and plastic products",
+      "objectClass": "secondary"
+    },
+    {
+      "flowObjectId": "fo_s_m-stel",
+      "name": "basic iron and steel and of ferro-alloys and first products thereof",
+      "objectClass": "secondary"
+    },
+    {
+      "flowObjectId": "fo_s_m-pape",
+      "name": "paper and paper products",
+      "objectClass": "secondary"
+    },
+    {
+      "flowObjectId": "fo_p_activity-1-virgin-cartridge-manufacturing",
+      "name": "1 C62 output from Manufacturing",
+      "objectClass": "primary"
+    },
+    {
+      "flowObjectId": "fo_s_a-powg",
+      "name": "electricity by gas",
+      "objectClass": "secondary"
+    },
+    {
+      "flowObjectId": "fo_p_activity-3-cartridge-use",
+      "name": "1 C62 output from Use",
+      "objectClass": "primary"
+    },
+    {
+      "flowObjectId": "fo_p_activity-4-cartridge-refilling",
+      "name": "1 C62 output from Maintenance, repair, refurbishment",
+      "objectClass": "primary"
+    },
+    {
+      "flowObjectId": "fo_s_a-incl",
+      "name": "incineration with energy recovery of plastic/rubber",
+      "objectClass": "secondary"
+    },
+    {
+      "flowObjectId": "fo_s_a-incp",
+      "name": "incineration with energy recovery of paper",
+      "objectClass": "secondary"
+    },
+    {
+      "flowObjectId": "fo_s_a-stew",
+      "name": "recycling of steel",
+      "objectClass": "secondary"
+    },
+    {
+      "flowObjectId": "fo_s_m-wdisc-eq",
+      "name": "treatment of waste/scrap, discarded equipment",
+      "objectClass": "secondary"
+    },
+    {
+      "flowObjectId": "fo_p_activity-10-cartridge-eol",
+      "name": "1 C62 output from End-of-life",
+      "objectClass": "primary"
+    }
+  ],
+  "activities": [
+    {
+      "activityId": "act_derived-lexmark-2-cycles-bom",
+      "Activity": "Lexmark cartridge components - BoM",
+      "ActivityType": "Lexmark cartridge components - BoM",
+      "LCStage": "Raw material acquisition",
+      "flows": [
+        {
+          "flowId": "fl_derived-lexmark-2-cycles-bom_001",
+          "flowObjectId": "fo_p_derived-lexmark-2-cycles-bom",
+          "direction": "output",
+          "amount": 1,
+          "unit": "C62",
+          "isDetermining": true,
+          "notes": "Determining flow (primary output) for this activity"
+        },
+        {
+          "flowId": "fl_derived-lexmark-2-cycles-bom_002",
+          "flowObjectId": "fo_s_m-chem",
+          "direction": "input",
+          "amount": 0.92,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "chemicals nec",
+          "notes": "Imported from Derived",
+          "bonsaiCode": "M_CHEM|PL"
+        },
+        {
+          "flowId": "fl_derived-lexmark-2-cycles-bom_003",
+          "flowObjectId": "fo_s_m-plas",
+          "direction": "input",
+          "amount": 0.666,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "plastics, basic",
+          "notes": "Imported from Derived",
+          "bonsaiCode": "M_PLAS|PL"
+        },
+        {
+          "flowId": "fl_derived-lexmark-2-cycles-bom_004",
+          "flowObjectId": "fo_s_m-plas",
+          "direction": "input",
+          "amount": 0.00332,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "plastics, basic",
+          "notes": "Imported from Derived",
+          "bonsaiCode": "M_PLAS|PL"
+        },
+        {
+          "flowId": "fl_derived-lexmark-2-cycles-bom_005",
+          "flowObjectId": "fo_s_m-rubp",
+          "direction": "input",
+          "amount": 0.0102,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "rubber and plastic products",
+          "notes": "Imported from Derived",
+          "bonsaiCode": "M_RUBP|PL"
+        },
+        {
+          "flowId": "fl_derived-lexmark-2-cycles-bom_006",
+          "flowObjectId": "fo_s_m-plas",
+          "direction": "input",
+          "amount": 0.00557,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "plastics, basic",
+          "notes": "Imported from Derived",
+          "bonsaiCode": "M_PLAS|PL"
+        },
+        {
+          "flowId": "fl_derived-lexmark-2-cycles-bom_007",
+          "flowObjectId": "fo_s_m-stel",
+          "direction": "input",
+          "amount": 0.0056,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "basic iron and steel and of ferro-alloys and first products thereof",
+          "notes": "Imported from Derived",
+          "bonsaiCode": "M_STEL|PL"
+        },
+        {
+          "flowId": "fl_derived-lexmark-2-cycles-bom_008",
+          "flowObjectId": "fo_s_m-pape",
+          "direction": "input",
+          "amount": 0.387,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "paper and paper products",
+          "notes": "Imported from Derived",
+          "bonsaiCode": "M_PAPE|PL"
+        },
+        {
+          "flowId": "fl_derived-lexmark-2-cycles-bom_009",
+          "flowObjectId": "fo_s_m-pape",
+          "direction": "input",
+          "amount": 0.113,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "paper and paper products",
+          "notes": "Imported from Derived",
+          "bonsaiCode": "M_PAPE|PL"
+        },
+        {
+          "flowId": "fl_derived-lexmark-2-cycles-bom_010",
+          "flowObjectId": "fo_s_m-pape",
+          "direction": "input",
+          "amount": 0.004,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "paper and paper products",
+          "notes": "Imported from Derived",
+          "bonsaiCode": "M_PAPE|PL"
+        },
+        {
+          "flowId": "fl_derived-lexmark-2-cycles-bom_011",
+          "flowObjectId": "fo_s_m-chem",
+          "direction": "input",
+          "amount": 0.003,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "chemicals nec",
+          "notes": "Imported from Derived",
+          "bonsaiCode": "M_CHEM|PL"
+        },
+        {
+          "flowId": "fl_derived-lexmark-2-cycles-bom_012",
+          "flowObjectId": "fo_s_m-plas",
+          "direction": "input",
+          "amount": 0.043,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "plastics, basic",
+          "notes": "Imported from Derived",
+          "bonsaiCode": "M_PLAS|PL"
+        }
+      ],
+      "determiningFlowId": "fl_derived-lexmark-2-cycles-bom_001"
+    },
+    {
+      "activityId": "act_activity-1-virgin-cartridge-manufacturing",
+      "Activity": "Virgin cartridge manufacturign in Poland in 2024",
+      "ActivityType": "Virgin cartridge manufacturign",
+      "LCStage": "Manufacturing",
+      "flows": [
+        {
+          "flowId": "fl_activity-1-virgin-cartridge-manufacturing_001",
+          "flowObjectId": "fo_p_activity-1-virgin-cartridge-manufacturing",
+          "direction": "output",
+          "amount": 1,
+          "unit": "C62",
+          "isDetermining": true,
+          "notes": "Determining flow (primary output) for this activity"
+        },
+        {
+          "flowId": "fl_activity-1-virgin-cartridge-manufacturing_002",
+          "flowObjectId": "fo_s_a-powg",
+          "direction": "input",
+          "amount": 0.002,
+          "unit": "KWH",
+          "sourceLocation": "WE",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "electricity by gas",
+          "notes": "Imported from Activity#1",
+          "bonsaiCode": "A_POWG|WE"
+        }
+      ],
+      "determiningFlowId": "fl_activity-1-virgin-cartridge-manufacturing_001",
+      "Place": "PL",
+      "ReferenceYear": 2024
+    },
+    {
+      "activityId": "act_activity-3-cartridge-use",
+      "Activity": "Cartridge use in Poland in 2024",
+      "ActivityType": "Cartridge use",
+      "LCStage": "Use",
+      "flows": [
+        {
+          "flowId": "fl_activity-3-cartridge-use_001",
+          "flowObjectId": "fo_p_activity-3-cartridge-use",
+          "direction": "output",
+          "amount": 1,
+          "unit": "C62",
+          "isDetermining": true,
+          "notes": "Determining flow (primary output) for this activity"
+        }
+      ],
+      "determiningFlowId": "fl_activity-3-cartridge-use_001",
+      "Place": "PL",
+      "ReferenceYear": 2024,
+      "notes": "Skipped non-BONSAI links: Activity#2_Virgin_cartridge_transport_to_user"
+    },
+    {
+      "activityId": "act_activity-4-cartridge-refilling",
+      "Activity": "Cartridge refilling in Poland in 2024",
+      "ActivityType": "Cartridge refilling",
+      "LCStage": "Maintenance, repair, refurbishment",
+      "flows": [
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_001",
+          "flowObjectId": "fo_p_activity-4-cartridge-refilling",
+          "direction": "output",
+          "amount": 1,
+          "unit": "C62",
+          "isDetermining": true,
+          "notes": "Determining flow (primary output) for this activity"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_002",
+          "flowObjectId": "fo_s_a-incl",
+          "direction": "output",
+          "amount": 0.046,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "incineration with energy recovery of plastic/rubber",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "A_INCL|PL"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_003",
+          "flowObjectId": "fo_s_a-incp",
+          "direction": "output",
+          "amount": 0.503,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "incineration with energy recovery of paper",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "A_INCP|PL"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_004",
+          "flowObjectId": "fo_s_a-stew",
+          "direction": "output",
+          "amount": 0.085,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "recycling of steel",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "A_STEW|PL"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_005",
+          "flowObjectId": "fo_s_m-wdisc-eq",
+          "direction": "output",
+          "amount": 0.00412,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "treatment of waste/scrap, discarded equipment",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "M_wDisc_eq|PL"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_006",
+          "flowObjectId": "fo_s_m-chem",
+          "direction": "input",
+          "amount": 0.92,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "chemicals nec",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "M_CHEM|PL"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_007",
+          "flowObjectId": "fo_s_m-plas",
+          "direction": "input",
+          "amount": 0.00332,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "plastics, basic",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "M_PLAS|PL"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_008",
+          "flowObjectId": "fo_s_m-rubp",
+          "direction": "input",
+          "amount": 0.0102,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "rubber and plastic products",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "M_RUBP|PL"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_009",
+          "flowObjectId": "fo_s_m-plas",
+          "direction": "input",
+          "amount": 0.00557,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "plastics, basic",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "M_PLAS|PL"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_010",
+          "flowObjectId": "fo_s_m-stel",
+          "direction": "input",
+          "amount": 0.0056,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "basic iron and steel and of ferro-alloys and first products thereof",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "M_STEL|PL"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_011",
+          "flowObjectId": "fo_s_a-powg",
+          "direction": "input",
+          "amount": 0.002,
+          "unit": "KWH",
+          "sourceLocation": "WE",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "electricity by gas",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "A_POWG|WE"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_012",
+          "flowObjectId": "fo_s_m-pape",
+          "direction": "input",
+          "amount": 0.387,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "paper and paper products",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "M_PAPE|PL"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_013",
+          "flowObjectId": "fo_s_m-pape",
+          "direction": "input",
+          "amount": 0.113,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "paper and paper products",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "M_PAPE|PL"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_014",
+          "flowObjectId": "fo_s_m-pape",
+          "direction": "input",
+          "amount": 0.004,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "paper and paper products",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "M_PAPE|PL"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_015",
+          "flowObjectId": "fo_s_m-chem",
+          "direction": "input",
+          "amount": 0.003,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "chemicals nec",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "M_CHEM|PL"
+        },
+        {
+          "flowId": "fl_activity-4-cartridge-refilling_016",
+          "flowObjectId": "fo_s_m-plas",
+          "direction": "input",
+          "amount": 0.043,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "plastics, basic",
+          "notes": "Imported from Activity#4",
+          "bonsaiCode": "M_PLAS|PL"
+        }
+      ],
+      "determiningFlowId": "fl_activity-4-cartridge-refilling_001",
+      "Place": "PL",
+      "ReferenceYear": 2024,
+      "notes": "Skipped non-BONSAI links: Activity#3_Cartridge_use"
+    },
+    {
+      "activityId": "act_activity-10-cartridge-eol",
+      "Activity": "Cartridge EoL in Poland in 2024",
+      "ActivityType": "Cartridge EoL",
+      "LCStage": "End-of-life",
+      "flows": [
+        {
+          "flowId": "fl_activity-10-cartridge-eol_001",
+          "flowObjectId": "fo_p_activity-10-cartridge-eol",
+          "direction": "output",
+          "amount": 1,
+          "unit": "C62",
+          "isDetermining": true,
+          "notes": "Determining flow (primary output) for this activity"
+        },
+        {
+          "flowId": "fl_activity-10-cartridge-eol_002",
+          "flowObjectId": "fo_s_a-incl",
+          "direction": "output",
+          "amount": 0.046,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "incineration with energy recovery of plastic/rubber",
+          "notes": "Imported from Activity#10",
+          "bonsaiCode": "A_INCL|PL"
+        },
+        {
+          "flowId": "fl_activity-10-cartridge-eol_003",
+          "flowObjectId": "fo_s_a-incp",
+          "direction": "output",
+          "amount": 0.503,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "incineration with energy recovery of paper",
+          "notes": "Imported from Activity#10",
+          "bonsaiCode": "A_INCP|PL"
+        },
+        {
+          "flowId": "fl_activity-10-cartridge-eol_004",
+          "flowObjectId": "fo_s_a-stew",
+          "direction": "output",
+          "amount": 0.085,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "recycling of steel",
+          "notes": "Imported from Activity#10",
+          "bonsaiCode": "A_STEW|PL"
+        },
+        {
+          "flowId": "fl_activity-10-cartridge-eol_005",
+          "flowObjectId": "fo_s_m-wdisc-eq",
+          "direction": "output",
+          "amount": 0.00412,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "treatment of waste/scrap, discarded equipment",
+          "notes": "Imported from Activity#10",
+          "bonsaiCode": "M_wDisc_eq|PL"
+        },
+        {
+          "flowId": "fl_activity-10-cartridge-eol_006",
+          "flowObjectId": "fo_s_a-incl",
+          "direction": "output",
+          "amount": 0.44,
+          "unit": "KGM",
+          "sourceLocation": "PL",
+          "evidenceMethod": "measured",
+          "bonsaiProcess": "incineration with energy recovery of plastic/rubber",
+          "notes": "Imported from Activity#10",
+          "bonsaiCode": "A_INCL|PL"
+        }
+      ],
+      "determiningFlowId": "fl_activity-10-cartridge-eol_001",
+      "Place": "PL",
+      "ReferenceYear": 2024,
+      "notes": "Skipped non-BONSAI links: Activity#9_Cartridge_use"
+    }
+  ]
+}
