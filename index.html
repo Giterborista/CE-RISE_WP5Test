@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CERISE DPP Workshop | PV Panel Passport Builder</title>
+  <meta name="description" content="Workshop tool for building a photovoltaic panel digital product passport from component rows, linked DPPs, and BONSAI GWP100 lookup data." />
+  <meta property="og:title" content="CERISE DPP Workshop" />
+  <meta property="og:description" content="Build a mock photovoltaic panel DPP with component inventory, linked cell DPPs, and transparent GWP100 impact calculations." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-preview.svg" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles.css?v=20260531-guide-rounding-1" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <button class="brand-mark" id="brandMark" type="button" title="Double-click to open the EoL actor scenario">PV</button>
+        <div>
+          <div class="eyebrow">CERISE DPP workshop</div>
+          <h1>PV Panel Passport Builder</h1>
+          <div class="header-meta" id="lookupMeta">Loading database lookup...</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a class="credit-badge" href="https://bonsai.uno" target="_blank" rel="noopener noreferrer" aria-label="BONSAI database attribution. Licensed under Creative Commons Attribution 4.0 International.">
+          <span class="credit-logo" aria-hidden="true">BONSAI</span>
+          <span class="credit-copy">Lookup data from BONSAI. Licensed under CC BY 4.0 International.</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <nav class="nav-tabs stepper" aria-label="Workshop sections" role="tablist">
+      <button class="tab-btn active" type="button" data-tab="setup" role="tab" aria-selected="true"><span class="step-number">1</span><span class="step-label">Process setup</span></button>
+      <button class="tab-btn" type="button" data-tab="inventory" role="tab" aria-selected="false"><span class="step-number">2</span><span class="step-label">Inventory</span></button>
+      <button class="tab-btn" type="button" data-tab="results" role="tab" aria-selected="false"><span class="step-number">3</span><span class="step-label">Results</span></button>
+      <button class="tab-btn" type="button" data-tab="export" role="tab" aria-selected="false"><span class="step-number">4</span><span class="step-label">Export</span></button>
+    </nav>
+
+    <section class="workspace-status" aria-label="Workshop status">
+      <div class="status-item"><span class="status-label">Database</span><strong id="statusDatabase">Loading</strong></div>
+      <div class="status-item"><span class="status-label">Inventory rows</span><strong id="statusRows">0</strong></div>
+      <div class="status-item"><span class="status-label">Calculated rows</span><strong id="statusCalculated">0</strong></div>
+      <div class="status-item"><span class="status-label">Total impact</span><strong id="statusTotal">0 kg CO2e</strong></div>
+    </section>
+
+    <section class="panel active" id="setupPanel">
+      <div class="section-title">
+        <div>
+          <div class="panel-kicker">Step 1</div>
+          <h2>Process setup</h2>
+        </div>
+        <a class="btn guide-download" href="docs/PV_DPP_workshop_one_page_guide.pdf" download>Download workshop guide</a>
+      </div>
+      <section class="form-card" aria-labelledby="productIdentityTitle">
+        <div class="card-title-row">
+          <h3 id="productIdentityTitle">Product identity</h3>
+        </div>
+        <div class="grid compact">
+          <div class="field"><label for="productName">Product name</label><input id="productName" /></div>
+          <div class="field"><label for="dppId">DPP identifier</label><input id="dppId" value="urn:dpp:workshop:pv-panel" readonly aria-readonly="true" /></div>
+          <div class="field"><label for="actorRole">Reporting role</label><input id="actorRole" /></div>
+          <div class="field"><label for="reporterName">Reporter / company</label><input id="reporterName" /></div>
+          <div class="field"><label for="productLocation">Reporting location</label><select id="productLocation"></select></div>
+          <div class="field"><label for="productStage">Lifecycle stage for this DPP</label><select id="productStage"><option value=""></option><option>Manufacturing</option><option>Raw material acquisition</option><option>Installation/distribution/retail</option><option>Use</option><option>Maintenance, repair, refurbishment</option><option>End-of-life</option></select></div>
+          <div class="field"><label for="referenceYear">Reference year</label><input id="referenceYear" type="number" min="2000" max="2100" /></div>
+          <div class="field"><label for="dppReferenceAmount">Reference flow amount</label><input id="dppReferenceAmount" type="number" step="any" /></div>
+          <div class="field"><label for="dppReferenceUnit">Reference flow unit</label><input id="dppReferenceUnit" placeholder="e.g. panel, m2, kg, item" /></div>
+          <div class="field wide-field"><label for="dppReferenceDescription">Product specification</label><textarea id="dppReferenceDescription" placeholder="Describe the PV panel specification used in the workshop"></textarea></div>
+        </div>
+      </section>
+    </section>
+
+    <section class="panel" id="inventoryPanel">
+      <div class="section-title">
+        <div>
+          <div class="panel-kicker">Step 2</div>
+          <h2>Component Inventory</h2>
+        </div>
+        <div>
+          <button class="btn success" id="addRowBtn" type="button">Add component</button>
+        </div>
+      </div>
+      <div id="inventoryNotice" class="empty-state">
+        <strong>No component rows yet</strong>
+        <span>Start with a blank row, then name the component, enter quantities, and optionally attach a linked DPP.</span>
+        <button class="btn success" id="emptyAddRowBtn" type="button">Add component row</button>
+      </div>
+      <div id="inventoryBody" class="inventory-list" aria-label="Component inventory rows"></div>
+    </section>
+
+    <section class="panel" id="resultsPanel">
+      <div class="section-title">
+        <div>
+          <div class="panel-kicker">Step 3</div>
+          <h2>Results</h2>
+          <p class="results-disclaimer">These results are workshop estimates only. They are not representative of a real PV panel case study and should be used only to discuss DPP data flow and calculation logic.</p>
+        </div>
+      </div>
+      <div class="summary-grid">
+        <div class="metric"><div class="label">Total</div><div class="value" id="totalImpact">0 kg CO2e</div></div>
+        <div class="metric"><div class="label">Own rows</div><div class="value" id="ownImpact">0 kg CO2e</div></div>
+        <div class="metric"><div class="label">Linked DPP</div><div class="value" id="linkedImpact">0 kg CO2e</div></div>
+        <div class="metric"><div class="label">Calculated rows</div><div class="value" id="calculatedRows">0</div></div>
+      </div>
+      <section class="results-block">
+        <div class="results-heading"><h3>DPP tree view</h3><span>Final product, workshop rows, and nested linked DPP entries</span></div>
+        <div id="valueChainTree" class="value-chain-tree"></div>
+      </section>
+      <section class="results-block">
+        <div class="results-heading"><h3>Component contribution</h3><span>Burdens and credits shown separately</span></div>
+        <div id="componentChart" class="contribution-list"></div>
+      </section>
+      <section class="results-block">
+        <div class="results-heading"><h3>Life cycle stage contribution</h3><span>Burdens and credits shown separately</span></div>
+        <div id="stageChart" class="contribution-list"></div>
+      </section>
+      <h3>Impact calculation rows</h3>
+      <div class="table-wrap">
+        <table id="resultsTable">
+          <thead><tr><th>Component</th><th>Stage</th><th>Quantity</th><th>Database entry</th><th>Own impact</th><th>Linked impact</th><th>Total</th><th>Status</th><th>Warnings</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" id="exportPanel">
+      <div class="section-title">
+        <div>
+          <div class="panel-kicker">Step 4</div>
+          <h2>Export Preview</h2>
+        </div>
+        <div class="export-actions">
+          <button class="btn" id="refreshExportBtn" type="button">Refresh Preview</button>
+          <button class="btn primary" id="downloadJsonBtn" type="button">Export JSON</button>
+        </div>
+      </div>
+      <textarea id="exportPreview" class="export-area" spellcheck="false"></textarea>
+    </section>
+  </main>
+
+  <div class="modal hidden" id="dppViewer" role="dialog" aria-modal="true" aria-labelledby="dppViewerTitle">
+    <div class="modal-panel">
+      <header class="modal-header">
+        <div>
+          <div class="panel-kicker">Linked DPP viewer</div>
+          <h2 id="dppViewerTitle">DPP details</h2>
+        </div>
+        <button class="btn" id="closeDppViewerBtn" type="button">Close</button>
+      </header>
+      <div class="modal-body" id="dppViewerBody"></div>
+    </div>
+  </div>
+
+  <script type="module" src="assets/app.js?v=20260531-guide-rounding-1"></script>
+</body>
+</html>

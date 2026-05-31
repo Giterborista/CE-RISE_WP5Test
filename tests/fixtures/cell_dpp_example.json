@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "workshop-cell-dpp-example-1.0.0",
+  "dppId": "urn:dpp:workshop:pv-cell:example",
+  "product": { "name": "Example PV cell" },
+  "functionalUnit": {
+    "what": "Provide one PV cell",
+    "howMuch": 1,
+    "unit": "cell",
+    "referenceFlow": { "amount": 1, "unit": "cell", "description": "1 PV cell" }
+  },
+  "results": {
+    "metric": "GWP100",
+    "unit": "tonnes CO2eq",
+    "totals": { "totalImpactTonnesCO2eq": 0.0025 }
+  }
+}

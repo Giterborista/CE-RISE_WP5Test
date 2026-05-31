@@ -1,0 +1,14 @@
+{
+  "name": "cerise-dpp-workshop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone CERISE PV Digital Product Passport workshop app.",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node tests/workshop_calculations.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

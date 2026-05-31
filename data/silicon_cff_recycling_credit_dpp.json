@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "workshop-pv-dpp-1.0.0",
+  "packageType": "CERISE_DPP_WORKSHOP_CFF_CREDIT",
+  "dppId": "urn:dpp:workshop:eol:cff-credit:silicon-recycling:1panel",
+  "exportedAt": "2026-05-31T08:47:29.684Z",
+  "product": {
+    "name": "Silicon recycling CFF credit",
+    "description": "Simplified workshop credit for recovering silicon from the PV cells at end of life. Calculated using the Circular Footprint Formula (CFF); calculation details are explained by the facilitator, not embedded in the webpage.",
+    "category": "EoL recycling credit",
+    "productionLocation": "BE"
+  },
+  "functionalUnit": {
+    "what": "Apply simplified CFF silicon recycling benefit to one end-of-life PV panel",
+    "howMuch": 1,
+    "unit": "panel",
+    "referenceFlow": {
+      "amount": 1,
+      "unit": "panel",
+      "description": "CFF silicon recycling credit for one EoL PV panel"
+    }
+  },
+  "inventoryRows": [],
+  "linkedDpps": [],
+  "results": {
+    "metric": "GWP100",
+    "unit": "tonnes CO2eq",
+    "rows": [
+      {
+        "rowId": "cff_silicon_credit",
+        "activityType": "CFF credit",
+        "componentName": "Silicon recycling CFF credit",
+        "stage": "End-of-life",
+        "quantity": 1,
+        "unit": "panel",
+        "ownImpactTonnesCO2eq": -0.011609999999999999,
+        "linkedImpactTonnesCO2eq": 0,
+        "totalImpactTonnesCO2eq": -0.011609999999999999,
+        "status": "calculated using CFF",
+        "warnings": []
+      }
+    ],
+    "totals": {
+      "ownImpactTonnesCO2eq": -0.011609999999999999,
+      "upstreamLinkedDppImpactTonnesCO2eq": 0,
+      "totalImpactTonnesCO2eq": -0.011609999999999999,
+      "byStage": {
+        "End-of-life": -0.011609999999999999
+      }
+    }
+  },
+  "cff": {
+    "label": "Calculated using CFF",
+    "recoveredMaterial": "silicon from PV cells",
+    "recoveredSiliconKg": 0.333,
+    "displayedCreditKgCO2e": -11.61,
+    "note": "Workshop simplification; not representative of a real case scenario."
+  }
+}

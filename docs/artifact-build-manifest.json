@@ -1,0 +1,28 @@
+{
+  "output": "/Users/bafr/CERISE-DPP-Workshop/docs/PV_DPP_workshop_timing_slide_CE_RISE_style.pptx",
+  "outputBytes": 1565559,
+  "slideCount": 1,
+  "slideSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "previewDir": "/Users/bafr/CERISE-DPP-Workshop/outputs/manual-slide/presentations/workshop-timing/preview-cerise",
+  "previewPaths": [
+    "/Users/bafr/CERISE-DPP-Workshop/outputs/manual-slide/presentations/workshop-timing/preview-cerise/slide-01.png"
+  ],
+  "layoutDir": "/Users/bafr/CERISE-DPP-Workshop/outputs/manual-slide/presentations/workshop-timing/layout-cerise",
+  "layoutResults": [
+    {
+      "layoutPath": "/Users/bafr/CERISE-DPP-Workshop/outputs/manual-slide/presentations/workshop-timing/layout-cerise/slide-01.layout.json"
+    }
+  ],
+  "contactSheet": "/Users/bafr/CERISE-DPP-Workshop/outputs/manual-slide/presentations/workshop-timing/contact-sheet-cerise.png",
+  "slides": [
+    {
+      "index": 1,
+      "requestedSlideNumber": 1,
+      "modulePath": "/Users/bafr/CERISE-DPP-Workshop/outputs/manual-slide/presentations/workshop-timing/slides/slide-01.mjs",
+      "exportName": "slide01"
+    }
+  ]
+}

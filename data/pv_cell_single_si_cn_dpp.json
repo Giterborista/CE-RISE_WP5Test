@@ -1,0 +1,2045 @@
+{
+  "schemaVersion": "cerise-workshop-linked-cell-dpp-1.1.0",
+  "packageType": "CERISE_LINKED_COMPONENT_DPP",
+  "dppId": "urn:dpp:workshop:pv-cell:single-si:cn:210x210mm",
+  "createdAt": "2026-05-25T17:28:21.354642+00:00",
+  "product": {
+    "name": "Photovoltaic cell, single-Si, 210 x 210 mm, at plant",
+    "description": "Workshop mock DPP rebuilt from PVPS Task 12 / SI1 X-Cell - CN inventory and rescaled from 1 m2 cell area to one 210 x 210 mm PV cell.",
+    "category": "PV cell",
+    "technology": "single-Si",
+    "productionLocation": "CN",
+    "cellDimensions": {
+      "widthMm": 210,
+      "heightMm": 210,
+      "areaM2": 0.04409999999999999
+    }
+  },
+  "functionalUnit": {
+    "what": "Provide one photovoltaic cell",
+    "howMuch": 1,
+    "unit": "cell",
+    "referenceFlow": {
+      "amount": 1,
+      "unit": "cell",
+      "description": "1 photovoltaic cell, single-Si, 210 x 210 mm, at plant, CN"
+    }
+  },
+  "inventoryRows": [
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 3,
+      "type": "component",
+      "description": "single-Si wafer, photovoltaics, at plant",
+      "location": "CN",
+      "unit": "m2",
+      "value": 0.045423,
+      "SD95": 0.0483347687560779,
+      "databaseEntry": {
+        "code": "M_ONMM",
+        "label": "other non-metallic mineral products(market for)",
+        "referenceUnit": "tonnes",
+        "conversionFactorFromSourceUnit": 0.00039600000000000003,
+        "convertedQuantity": 0.000017987508,
+        "regionUsed": "CN",
+        "factorTonnesCO2eqPerReferenceUnit": 1.207894325,
+        "mappingConfidence": "medium",
+        "mappingBasis": "Fallback category for silicon wafer because no dedicated photovoltaic wafer factor exists in the lookup."
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.0000217270088340921
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 4,
+      "type": "resource",
+      "description": "metallization paste, front side, at plant",
+      "location": "RER",
+      "unit": "kg",
+      "value": 0.00014875,
+      "SD95": 0.0480987411817918,
+      "databaseEntry": {
+        "code": "C_ONFM",
+        "label": "other non-ferrous metal, refined",
+        "referenceUnit": "tonnes",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 1.4875e-7,
+        "regionUsed": "WE",
+        "factorTonnesCO2eqPerReferenceUnit": 2.629412195,
+        "mappingConfidence": "source",
+        "mappingBasis": "source conversion"
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 3.9112506400625e-7
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 5,
+      "type": "resource",
+      "description": "metallization paste, back side, at plant",
+      "location": "RER",
+      "unit": "kg",
+      "value": 0.000049,
+      "SD95": 0.0480987411817918,
+      "databaseEntry": {
+        "code": "C_ONFM",
+        "label": "other non-ferrous metal, refined",
+        "referenceUnit": "tonnes",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 4.9e-8,
+        "regionUsed": "WE",
+        "factorTonnesCO2eqPerReferenceUnit": 2.629412195,
+        "mappingConfidence": "source",
+        "mappingBasis": "source conversion"
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 1.28841197555e-7
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 6,
+      "type": "resource",
+      "description": "metallization paste, back side, aluminium, at plant",
+      "location": "RER",
+      "unit": "kg",
+      "value": 0.00244374200765956,
+      "SD95": 0.0480987411817918,
+      "databaseEntry": {
+        "code": "C_ONFM",
+        "label": "other non-ferrous metal, refined",
+        "referenceUnit": "tonnes",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 0.00000244374200765957,
+        "regionUsed": "WE",
+        "factorTonnesCO2eqPerReferenceUnit": 2.629412195,
+        "mappingConfidence": "source",
+        "mappingBasis": "source conversion"
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.00000642560503637384
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 7,
+      "type": "resource",
+      "description": "ammonia, liquid, at regional storehouse",
+      "location": "RER",
+      "unit": "kg",
+      "value": 0.000965865384615384,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": "M_CHEM",
+        "label": "chemicals nec(market for)",
+        "referenceUnit": "tonnes",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 9.65865384615384e-7,
+        "regionUsed": "WE",
+        "factorTonnesCO2eqPerReferenceUnit": 3.570533386,
+        "mappingConfidence": "medium",
+        "mappingBasis": "Generic chemicals market used for missing C_CHBI chemical category."
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.00000344865460215096
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 8,
+      "type": "resource",
+      "description": "phosphoryl chloride, at plant",
+      "location": "RER",
+      "unit": "kg",
+      "value": 0.000587130177514793,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": "M_CHEM",
+        "label": "chemicals nec(market for)",
+        "referenceUnit": "tonnes",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 5.87130177514793e-7,
+        "regionUsed": "WE",
+        "factorTonnesCO2eqPerReferenceUnit": 3.570533386,
+        "mappingConfidence": "medium",
+        "mappingBasis": "Generic chemicals market used for missing C_CHBI chemical category."
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.00000209636790074467
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 9,
+      "type": "resource",
+      "description": "isopropanol, at plant",
+      "location": "RER",
+      "unit": "kg",
+      "value": 0.00781028106508875,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": "M_CHEM",
+        "label": "chemicals nec(market for)",
+        "referenceUnit": "tonnes",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 0.00000781028106508875,
+        "regionUsed": "WE",
+        "factorTonnesCO2eqPerReferenceUnit": 3.570533386,
+        "mappingConfidence": "source",
+        "mappingBasis": "source matched workbook"
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.000027886869296943
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 10,
+      "type": "resource",
+      "description": "hydrochloric acid, 30% in H2O, at plant",
+      "location": "RER",
+      "unit": "kg",
+      "value": 0.0000277255917159763,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": "M_CHEM",
+        "label": "chemicals nec(market for)",
+        "referenceUnit": "tonnes",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 2.77255917159763e-8,
+        "regionUsed": "WE",
+        "factorTonnesCO2eqPerReferenceUnit": 3.570533386,
+        "mappingConfidence": "medium",
+        "mappingBasis": "Generic chemicals market used for missing C_CHBI chemical category."
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 9.89951508684985e-8
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 11,
+      "type": "resource",
+      "description": "hydrogen fluoride, at plant",
+      "location": "GLO",
+      "unit": "kg",
+      "value": 0.0000284504437869822,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": "M_CHMF",
+        "label": "chemical and fertilizer minerals(market for)",
+        "referenceUnit": "tonnes",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 2.84504437869822e-8,
+        "regionUsed": "WE",
+        "factorTonnesCO2eqPerReferenceUnit": 0.12705258,
+        "mappingConfidence": "source",
+        "mappingBasis": "source matched workbook"
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 3.61470228528106e-9
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 12,
+      "type": "resource",
+      "description": "sodium hydroxide, 50% in H2O, production mix, at plant",
+      "location": "RER",
+      "unit": "kg",
+      "value": 0.0266383136094675,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": "M_CHEM",
+        "label": "chemicals nec(market for)",
+        "referenceUnit": "tonnes",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 0.0000266383136094675,
+        "regionUsed": "WE",
+        "factorTonnesCO2eqPerReferenceUnit": 3.570533386,
+        "mappingConfidence": "medium",
+        "mappingBasis": "Generic chemicals market used for missing C_CHBI chemical category."
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.0000951129880893417
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 13,
+      "type": "resource",
+      "description": "lime, hydrated, packed, at plant",
+      "location": "CH",
+      "unit": "kg",
+      "value": 0.000665051775147929,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": "C_CMNT",
+        "label": "plaster, lime, cement, concrete, and products thereof",
+        "referenceUnit": "tonnes",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 6.65051775147929e-7,
+        "regionUsed": "CH",
+        "factorTonnesCO2eqPerReferenceUnit": 1.053363027,
+        "mappingConfidence": "source",
+        "mappingBasis": "source conversion"
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 7.00540950981546e-7
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 14,
+      "type": "resource",
+      "description": "refrigerant R134a, at plant",
+      "location": "RER",
+      "unit": "kg",
+      "value": 0.00000137540680473373,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": "M_CHEM",
+        "label": "chemicals nec(market for)",
+        "referenceUnit": "tonnes",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 1.37540680473373e-9,
+        "regionUsed": "WE",
+        "factorTonnesCO2eqPerReferenceUnit": 3.570533386,
+        "mappingConfidence": "low",
+        "mappingBasis": "Generic chemicals market. This is a weak proxy for refrigerant production."
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 4.91093591563336e-9
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 15,
+      "type": "resource",
+      "description": "nitrogen, liquid, at plant",
+      "location": "RER",
+      "unit": "kg",
+      "value": 0.0507396449704142,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": "M_CHEM",
+        "label": "chemicals nec(market for)",
+        "referenceUnit": "tonnes",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 0.0000507396449704142,
+        "regionUsed": "WE",
+        "factorTonnesCO2eqPerReferenceUnit": 3.570533386,
+        "mappingConfidence": "medium",
+        "mappingBasis": "Generic chemicals market used for missing C_CHBI chemical category."
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.000181167596360651
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 16,
+      "type": "resource",
+      "description": "silane, at plant",
+      "location": "RER",
+      "unit": "kg",
+      "value": 0.000128298816568047,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": "C_ONMM",
+        "label": "non-metallic mineral product, other",
+        "referenceUnit": "tonnes",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 1.28298816568047e-7,
+        "regionUsed": "WE",
+        "factorTonnesCO2eqPerReferenceUnit": 2.017140204,
+        "mappingConfidence": "source",
+        "mappingBasis": "source conversion"
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 2.5879670102503e-7
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 17,
+      "type": "resource",
+      "description": "tap water, water balance according to MoeK 2013, at user",
+      "location": "CN",
+      "unit": "kg",
+      "value": 7.53846153846154,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "low",
+        "mappingBasis": "No good water supply category exists in the current physical-unit lookup; retained but excluded."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "No good water supply category exists in the current physical-unit lookup; retained but excluded."
+      ]
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 18,
+      "type": "resource",
+      "description": "electricity, medium voltage, at grid",
+      "location": "CN",
+      "unit": "kWh",
+      "value": 0.782623792124926,
+      "SD95": 0.0480987411817918,
+      "databaseEntry": {
+        "code": "M_electricity",
+        "label": "production of electricity (market for)",
+        "referenceUnit": "TJ",
+        "conversionFactorFromSourceUnit": 0.0000036,
+        "convertedQuantity": 0.00000281744565164973,
+        "regionUsed": "CN",
+        "factorTonnesCO2eqPerReferenceUnit": 157.1105829,
+        "mappingConfidence": "source",
+        "mappingBasis": "source conversion"
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.00044265052861976
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 19,
+      "type": "resource",
+      "description": "natural gas, burned in industrial furnace low-NOx >100kW",
+      "location": "RER",
+      "unit": "MJ",
+      "value": 0.00268195266272189,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": "EF_GASE",
+        "label": "natural gas and services related to natural gas extraction, excluding surveying, combustion of",
+        "referenceUnit": "TJ",
+        "conversionFactorFromSourceUnit": 0.000001,
+        "convertedQuantity": 2.68195266272189e-9,
+        "regionUsed": "WE",
+        "factorTonnesCO2eqPerReferenceUnit": 62.80610831,
+        "mappingConfidence": "high",
+        "mappingBasis": "Combustion inventory expressed in MJ mapped to natural gas combustion factor."
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 1.68443009417204e-7
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 20,
+      "type": "resource",
+      "description": "photovoltaic cell factory",
+      "location": "DE",
+      "unit": "unit",
+      "value": 1.76320266272189e-8,
+      "SD95": 0.134613707454859,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "excluded",
+        "mappingBasis": "Infrastructure row; source conversion file marks it as not considered."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Infrastructure row; source conversion file marks it as not considered."
+      ]
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 21,
+      "type": "resource",
+      "description": "transport, freight, lorry, fleet average",
+      "location": "RER",
+      "unit": "tkm",
+      "value": 0.0120869082840237,
+      "SD95": 0.0923892411377103,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "missing",
+        "mappingBasis": "No tonne-km road freight factor exists in current lookup; retained but excluded."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "No tonne-km road freight factor exists in current lookup; retained but excluded."
+      ]
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 22,
+      "type": "resource",
+      "description": "transport, freight, rail",
+      "location": "RER",
+      "unit": "tkm",
+      "value": 0.0670488165680473,
+      "SD95": 0.0923892411377103,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "missing",
+        "mappingBasis": "No tonne-km rail freight factor exists in current lookup; retained but excluded."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "No tonne-km rail freight factor exists in current lookup; retained but excluded."
+      ]
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 23,
+      "type": "resource",
+      "description": "treatment, PV cell production effluent, to wastewater treatment, class 3",
+      "location": "CH",
+      "unit": "m3",
+      "value": 0.00678461538461539,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": "M_SE_wwater",
+        "label": "provision of waste water services for sewage(market for)",
+        "referenceUnit": "tonnes (service)",
+        "conversionFactorFromSourceUnit": 1,
+        "convertedQuantity": 0.00678461538461539,
+        "regionUsed": "CH",
+        "factorTonnesCO2eqPerReferenceUnit": 0.019717813,
+        "mappingConfidence": "low-medium",
+        "mappingBasis": "Wastewater service proxy. Original conversion sheet excluded this as an outlier, so it is marked sensitivity/excluded from main total."
+      },
+      "calculation": {
+        "status": "calculated-sensitivity",
+        "impactTonnesCO2eq": 0.000133777777430769
+      },
+      "warnings": [
+        "Excluded from main total because the source conversion workbook marked this wastewater treatment as an outlier/excluded."
+      ]
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 24,
+      "type": "resource",
+      "description": "disposal, waste, Si waferprod., inorg, 9.4% water, to residual material landfill",
+      "location": "CH",
+      "unit": "kg",
+      "value": 0.102747781065089,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": "M_HA_LAND",
+        "label": "landfill of hazardous waste(market for)",
+        "referenceUnit": "tonnes (service)",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 0.000102747781065089,
+        "regionUsed": "CH",
+        "factorTonnesCO2eqPerReferenceUnit": 0.026371629,
+        "mappingConfidence": "low",
+        "mappingBasis": "Hazardous landfill proxy for residual inorganic wafer-production waste."
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.00000270962636282175
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 25,
+      "type": "resource",
+      "description": "disposal, solvents mixture, 16.5% water, to hazardous waste incineration",
+      "location": "CH",
+      "unit": "kg",
+      "value": 0.00759282544378698,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": "M_HA_INCI_no_recov",
+        "label": "incineration without energy recovery of hazardous waste(market for)",
+        "referenceUnit": "tonnes (service)",
+        "conversionFactorFromSourceUnit": 0.001,
+        "convertedQuantity": 0.00000759282544378698,
+        "regionUsed": "WE",
+        "factorTonnesCO2eqPerReferenceUnit": 2.724200901,
+        "mappingConfidence": "high",
+        "mappingBasis": "Hazardous waste incineration without energy recovery matches source description."
+      },
+      "calculation": {
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.0000206843819151002
+      },
+      "warnings": []
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 26,
+      "type": "direct emission",
+      "description": "Heat, waste",
+      "location": "air, high population density",
+      "unit": "MJ",
+      "value": 2.28328402366864,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Heat, waste",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "Heat, waste",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "b411ec8b-c60a-4235-a3b2-8bf8443cbc55",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 27,
+      "type": "direct emission",
+      "description": "Water, CN",
+      "location": "air, unspecified",
+      "unit": "kg",
+      "value": 0.753846153846154,
+      "SD95": 0.0716860769131384,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Water, CN",
+        "sourceCompartment": "air, unspecified",
+        "biosphere3Name": "Water",
+        "biosphere3Compartment": "('air',)",
+        "biosphere3Uuid": "075e433b-4be4-448e-9510-9a5029c1ce94",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 28,
+      "type": "direct emission",
+      "description": "Aluminium",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 3.40680473372781e-7,
+      "SD95": 0.223136047846596,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Aluminium",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "Aluminium III",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "6f0b8b7c-3888-4174-b7e3-916d42d678ee",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 29,
+      "type": "direct emission",
+      "description": "Hydrogen fluoride",
+      "location": "air, unspecified",
+      "unit": "kg",
+      "value": 0.0000060887573964497,
+      "SD95": 0.0691853256091626,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Hydrogen fluoride",
+        "sourceCompartment": "air, unspecified",
+        "biosphere3Name": "Hydrogen fluoride",
+        "biosphere3Compartment": "('air',)",
+        "biosphere3Uuid": "24541c8c-9f11-49ae-9de5-456f238a3f5e",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 30,
+      "type": "direct emission",
+      "description": "Lead",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 3.40680473372781e-7,
+      "SD95": 0.223136047846596,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Lead",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "Lead II",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "6a903634-c97f-4c49-a7c0-88f0e6ac7a23",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 31,
+      "type": "direct emission",
+      "description": "Silicon",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 1.39715236686391e-9,
+      "SD95": 0.223136047846596,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Silicon",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "Silicon",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "997dccfb-6574-46b8-ad93-7f31074abf9a",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 32,
+      "type": "direct emission",
+      "description": "Silver",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 3.40680473372781e-7,
+      "SD95": 0.223136047846596,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Silver",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "Silver I",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "c6462d84-caa9-425a-a923-45238690c6f3",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 33,
+      "type": "direct emission",
+      "description": "Tin",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 3.40680473372781e-7,
+      "SD95": 0.223136047846596,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Tin",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "Tin ion",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "19b6e569-85a4-4ea9-a590-d61a21e3c846",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 34,
+      "type": "direct emission",
+      "description": "Ammonia",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 0.00000164541420118343,
+      "SD95": 0.0576337131235918,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Ammonia",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "Ammonia",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "9990b51b-7023-4700-bca0-1a32ef921f74",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 35,
+      "type": "direct emission",
+      "description": "Carbon dioxide, fossil",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 0.00735724852071006,
+      "SD95": 0.0539677869202265,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "reportedDirectEmissionTonnesCO2": 0.0001668310322156476
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup.",
+        "Reported separately as direct fossil CO2 mass; not included in main BONSAI process/object total."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Carbon dioxide, fossil",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "Carbon dioxide, fossil",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "f9749677-9c9f-4678-ab55-c607dfdc2cb9",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 36,
+      "type": "direct emission",
+      "description": "Chlorine",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 0.00000202958579881657,
+      "SD95": 0.0691853256091626,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Chlorine",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "Chlorine",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "247ac273-60fa-4e21-9408-793f75fa1d37",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 37,
+      "type": "direct emission",
+      "description": "Hydrogen",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 0.000485650887573964,
+      "SD95": 0.0691853256091626,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Hydrogen",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "Hydrogen",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "8e906def-6bd5-4248-ac2b-94e6eedde3c9",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 38,
+      "type": "direct emission",
+      "description": "2-Propanol",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 0.000648742603550296,
+      "SD95": 0.0691853256091626,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "2-Propanol",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "2-Propanol",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "cbf58f64-9286-406f-8dcb-ef1d81eec980",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 39,
+      "type": "direct emission",
+      "description": "Acetaldehyde",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 0.0000279068047337278,
+      "SD95": 0.0691853256091626,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Acetaldehyde",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "Acetaldehyde",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "5ad58fcc-e9ba-4155-a3c9-e4ffb3065a6f",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 40,
+      "type": "direct emission",
+      "description": "Ethane, 1,1,1,2-tetrafluoro-, HFC-134a",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 0.00000137540680473373,
+      "SD95": 0.0691853256091626,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Ethane, 1,1,1,2-tetrafluoro-, HFC-134a",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "Ethane, 1,1,1,2-tetrafluoro-, HFC-134a",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "fa0c2bee-8dd9-4f8a-8489-b1f3b43de958",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 41,
+      "type": "direct emission",
+      "description": "Silicon",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 0.0000146782544378698,
+      "SD95": 0.223136047846596,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Silicon",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "Silicon",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "997dccfb-6574-46b8-ad93-7f31074abf9a",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 42,
+      "type": "direct emission",
+      "description": "Silicon",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 0.000115976331360947,
+      "SD95": 0.223136047846596,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "Silicon",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "Silicon",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "997dccfb-6574-46b8-ad93-7f31074abf9a",
+        "mappingStatus": "mapped"
+      }
+    },
+    {
+      "sourceSheet": "X-Cell - CN",
+      "sourceRow": 43,
+      "type": "direct emission",
+      "description": "NMVOC, non-methane volatile organic compounds, unspecified origin",
+      "location": "air, high population density",
+      "unit": "kg",
+      "value": 0.000556323964497041,
+      "SD95": 0.0691853256091626,
+      "databaseEntry": {
+        "code": null,
+        "label": null,
+        "referenceUnit": null,
+        "conversionFactorFromSourceUnit": null,
+        "convertedQuantity": null,
+        "regionUsed": null,
+        "factorTonnesCO2eqPerReferenceUnit": null,
+        "mappingConfidence": "not mapped",
+        "mappingBasis": "Direct emission or no process/object mapping in current lookup."
+      },
+      "calculation": {
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      "warnings": [
+        "Direct emission retained as DPP information but not included in process/object lookup total.",
+        "Direct emission or no process/object mapping in current lookup."
+      ],
+      "directEmissionVocabulary": {
+        "ontology": "biosphere3",
+        "source": "SI2 - conversions used.xlsx::emissions",
+        "sourceDescription": "NMVOC, non-methane volatile organic compounds, unspecified origin",
+        "sourceCompartment": "air, high population density",
+        "biosphere3Name": "NMVOC, non-methane volatile organic compounds",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "175baa64-d985-4c5e-84ef-67cc3a1cf952",
+        "mappingStatus": "mapped"
+      }
+    }
+  ],
+  "results": {
+    "metric": "GWP100",
+    "unit": "tonnes CO2eq",
+    "totals": {
+      "totalImpactTonnesCO2eq": 0.000805664894730034,
+      "sensitivityExcludedImpactTonnesCO2eq": 0.000133777777430769,
+      "reportedDirectFossilCO2Tonnes": 0.00000735724852071006,
+      "calculatedRows": 18,
+      "sensitivityRows": 1,
+      "notCalculatedRows": 22
+    },
+    "rows": [
+      {
+        "description": "single-Si wafer, photovoltaics, at plant",
+        "type": "component",
+        "code": "M_ONMM",
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.0000217270088340921
+      },
+      {
+        "description": "metallization paste, front side, at plant",
+        "type": "resource",
+        "code": "C_ONFM",
+        "status": "calculated",
+        "impactTonnesCO2eq": 3.9112506400625e-7
+      },
+      {
+        "description": "metallization paste, back side, at plant",
+        "type": "resource",
+        "code": "C_ONFM",
+        "status": "calculated",
+        "impactTonnesCO2eq": 1.28841197555e-7
+      },
+      {
+        "description": "metallization paste, back side, aluminium, at plant",
+        "type": "resource",
+        "code": "C_ONFM",
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.00000642560503637384
+      },
+      {
+        "description": "ammonia, liquid, at regional storehouse",
+        "type": "resource",
+        "code": "M_CHEM",
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.00000344865460215096
+      },
+      {
+        "description": "phosphoryl chloride, at plant",
+        "type": "resource",
+        "code": "M_CHEM",
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.00000209636790074467
+      },
+      {
+        "description": "isopropanol, at plant",
+        "type": "resource",
+        "code": "M_CHEM",
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.000027886869296943
+      },
+      {
+        "description": "hydrochloric acid, 30% in H2O, at plant",
+        "type": "resource",
+        "code": "M_CHEM",
+        "status": "calculated",
+        "impactTonnesCO2eq": 9.89951508684985e-8
+      },
+      {
+        "description": "hydrogen fluoride, at plant",
+        "type": "resource",
+        "code": "M_CHMF",
+        "status": "calculated",
+        "impactTonnesCO2eq": 3.61470228528106e-9
+      },
+      {
+        "description": "sodium hydroxide, 50% in H2O, production mix, at plant",
+        "type": "resource",
+        "code": "M_CHEM",
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.0000951129880893417
+      },
+      {
+        "description": "lime, hydrated, packed, at plant",
+        "type": "resource",
+        "code": "C_CMNT",
+        "status": "calculated",
+        "impactTonnesCO2eq": 7.00540950981546e-7
+      },
+      {
+        "description": "refrigerant R134a, at plant",
+        "type": "resource",
+        "code": "M_CHEM",
+        "status": "calculated",
+        "impactTonnesCO2eq": 4.91093591563336e-9
+      },
+      {
+        "description": "nitrogen, liquid, at plant",
+        "type": "resource",
+        "code": "M_CHEM",
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.000181167596360651
+      },
+      {
+        "description": "silane, at plant",
+        "type": "resource",
+        "code": "C_ONMM",
+        "status": "calculated",
+        "impactTonnesCO2eq": 2.5879670102503e-7
+      },
+      {
+        "description": "tap water, water balance according to MoeK 2013, at user",
+        "type": "resource",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      {
+        "description": "electricity, medium voltage, at grid",
+        "type": "resource",
+        "code": "M_electricity",
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.00044265052861976
+      },
+      {
+        "description": "natural gas, burned in industrial furnace low-NOx >100kW",
+        "type": "resource",
+        "code": "EF_GASE",
+        "status": "calculated",
+        "impactTonnesCO2eq": 1.68443009417204e-7
+      },
+      {
+        "description": "photovoltaic cell factory",
+        "type": "resource",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      {
+        "description": "transport, freight, lorry, fleet average",
+        "type": "resource",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      {
+        "description": "transport, freight, rail",
+        "type": "resource",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      {
+        "description": "treatment, PV cell production effluent, to wastewater treatment, class 3",
+        "type": "resource",
+        "code": "M_SE_wwater",
+        "status": "calculated-sensitivity",
+        "impactTonnesCO2eq": 0.000133777777430769
+      },
+      {
+        "description": "disposal, waste, Si waferprod., inorg, 9.4% water, to residual material landfill",
+        "type": "resource",
+        "code": "M_HA_LAND",
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.00000270962636282175
+      },
+      {
+        "description": "disposal, solvents mixture, 16.5% water, to hazardous waste incineration",
+        "type": "resource",
+        "code": "M_HA_INCI_no_recov",
+        "status": "calculated",
+        "impactTonnesCO2eq": 0.0000206843819151002
+      },
+      {
+        "description": "Heat, waste",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "Heat, waste",
+          "sourceCompartment": "air, high population density",
+          "biosphere3Name": "Heat, waste",
+          "biosphere3Compartment": "('air', 'urban air close to ground')",
+          "biosphere3Uuid": "b411ec8b-c60a-4235-a3b2-8bf8443cbc55",
+          "mappingStatus": "mapped"
+        }
+      },
+      {
+        "description": "Water, CN",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "Water, CN",
+          "sourceCompartment": "air, unspecified",
+          "biosphere3Name": "Water",
+          "biosphere3Compartment": "('air',)",
+          "biosphere3Uuid": "075e433b-4be4-448e-9510-9a5029c1ce94",
+          "mappingStatus": "mapped"
+        }
+      },
+      {
+        "description": "Aluminium",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "Aluminium",
+          "sourceCompartment": "air, high population density",
+          "biosphere3Name": "Aluminium III",
+          "biosphere3Compartment": "('air', 'urban air close to ground')",
+          "biosphere3Uuid": "6f0b8b7c-3888-4174-b7e3-916d42d678ee",
+          "mappingStatus": "mapped"
+        }
+      },
+      {
+        "description": "Hydrogen fluoride",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "Hydrogen fluoride",
+          "sourceCompartment": "air, unspecified",
+          "biosphere3Name": "Hydrogen fluoride",
+          "biosphere3Compartment": "('air',)",
+          "biosphere3Uuid": "24541c8c-9f11-49ae-9de5-456f238a3f5e",
+          "mappingStatus": "mapped"
+        }
+      },
+      {
+        "description": "Lead",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "Lead",
+          "sourceCompartment": "air, high population density",
+          "biosphere3Name": "Lead II",
+          "biosphere3Compartment": "('air', 'urban air close to ground')",
+          "biosphere3Uuid": "6a903634-c97f-4c49-a7c0-88f0e6ac7a23",
+          "mappingStatus": "mapped"
+        }
+      },
+      {
+        "description": "Silicon",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      {
+        "description": "Silver",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "Silver",
+          "sourceCompartment": "air, high population density",
+          "biosphere3Name": "Silver I",
+          "biosphere3Compartment": "('air', 'urban air close to ground')",
+          "biosphere3Uuid": "c6462d84-caa9-425a-a923-45238690c6f3",
+          "mappingStatus": "mapped"
+        }
+      },
+      {
+        "description": "Tin",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "Tin",
+          "sourceCompartment": "air, high population density",
+          "biosphere3Name": "Tin ion",
+          "biosphere3Compartment": "('air', 'urban air close to ground')",
+          "biosphere3Uuid": "19b6e569-85a4-4ea9-a590-d61a21e3c846",
+          "mappingStatus": "mapped"
+        }
+      },
+      {
+        "description": "Ammonia",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "Ammonia",
+          "sourceCompartment": "air, high population density",
+          "biosphere3Name": "Ammonia",
+          "biosphere3Compartment": "('air', 'urban air close to ground')",
+          "biosphere3Uuid": "9990b51b-7023-4700-bca0-1a32ef921f74",
+          "mappingStatus": "mapped"
+        }
+      },
+      {
+        "description": "Carbon dioxide, fossil",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "Carbon dioxide, fossil",
+          "sourceCompartment": "air, high population density",
+          "biosphere3Name": "Carbon dioxide, fossil",
+          "biosphere3Compartment": "('air', 'urban air close to ground')",
+          "biosphere3Uuid": "f9749677-9c9f-4678-ab55-c607dfdc2cb9",
+          "mappingStatus": "mapped"
+        }
+      },
+      {
+        "description": "Chlorine",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "Chlorine",
+          "sourceCompartment": "air, high population density",
+          "biosphere3Name": "Chlorine",
+          "biosphere3Compartment": "('air', 'urban air close to ground')",
+          "biosphere3Uuid": "247ac273-60fa-4e21-9408-793f75fa1d37",
+          "mappingStatus": "mapped"
+        }
+      },
+      {
+        "description": "Hydrogen",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "Hydrogen",
+          "sourceCompartment": "air, high population density",
+          "biosphere3Name": "Hydrogen",
+          "biosphere3Compartment": "('air', 'urban air close to ground')",
+          "biosphere3Uuid": "8e906def-6bd5-4248-ac2b-94e6eedde3c9",
+          "mappingStatus": "mapped"
+        }
+      },
+      {
+        "description": "2-Propanol",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "2-Propanol",
+          "sourceCompartment": "air, high population density",
+          "biosphere3Name": "2-Propanol",
+          "biosphere3Compartment": "('air', 'urban air close to ground')",
+          "biosphere3Uuid": "cbf58f64-9286-406f-8dcb-ef1d81eec980",
+          "mappingStatus": "mapped"
+        }
+      },
+      {
+        "description": "Acetaldehyde",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "Acetaldehyde",
+          "sourceCompartment": "air, high population density",
+          "biosphere3Name": "Acetaldehyde",
+          "biosphere3Compartment": "('air', 'urban air close to ground')",
+          "biosphere3Uuid": "5ad58fcc-e9ba-4155-a3c9-e4ffb3065a6f",
+          "mappingStatus": "mapped"
+        }
+      },
+      {
+        "description": "Ethane, 1,1,1,2-tetrafluoro-, HFC-134a",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "Ethane, 1,1,1,2-tetrafluoro-, HFC-134a",
+          "sourceCompartment": "air, high population density",
+          "biosphere3Name": "Ethane, 1,1,1,2-tetrafluoro-, HFC-134a",
+          "biosphere3Compartment": "('air', 'urban air close to ground')",
+          "biosphere3Uuid": "fa0c2bee-8dd9-4f8a-8489-b1f3b43de958",
+          "mappingStatus": "mapped"
+        }
+      },
+      {
+        "description": "Silicon",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      {
+        "description": "Silicon",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0
+      },
+      {
+        "description": "NMVOC, non-methane volatile organic compounds, unspecified origin",
+        "type": "direct emission",
+        "code": null,
+        "status": "not calculated",
+        "impactTonnesCO2eq": 0,
+        "directEmissionVocabulary": {
+          "ontology": "biosphere3",
+          "source": "SI2 - conversions used.xlsx::emissions",
+          "sourceDescription": "NMVOC, non-methane volatile organic compounds, unspecified origin",
+          "sourceCompartment": "air, high population density",
+          "biosphere3Name": "NMVOC, non-methane volatile organic compounds",
+          "biosphere3Compartment": "('air', 'urban air close to ground')",
+          "biosphere3Uuid": "175baa64-d985-4c5e-84ef-67cc3a1cf952",
+          "mappingStatus": "mapped"
+        }
+      }
+    ]
+  },
+  "provenance": {
+    "sourceFiles": [
+      "/Users/bafr/Downloads/PV_Panel_check/SI1 - DPP LCI information.xlsx",
+      "/Users/bafr/Downloads/PV_Panel_check/SI2 - conversions used.xlsx",
+      "/Users/bafr/CERISE-DPP-Workshop/data/footprint_lookup.json"
+    ],
+    "sourceSheet": "SI1 - DPP LCI information.xlsx / X-Cell - CN",
+    "lookupMetric": "GWP100",
+    "lookupMetadata": {
+      "name": "CERISE DPP Workshop footprint lookup",
+      "sourceCsv": "/Users/bafr/cerise_pef_Python/footprints-v2.1.6.csv",
+      "classificationSource": "/Users/bafr/CERISE-SEE/ontology/bonsai/classification.csv",
+      "sourceVersion": "v2.1.6",
+      "metric": "GWP100",
+      "unitEmission": "tonnes CO2eq",
+      "allowedReferenceUnits": [
+        "TJ",
+        "items",
+        "tonnes",
+        "tonnes (service)"
+      ],
+      "entryCount": 1388,
+      "factorRowCount": 45439,
+      "generatedAt": "2026-05-23T12:06:45.237410+00:00"
+    },
+    "assumptions": [
+      "RER regions are calculated with WE factors; GLO uses Global where available, otherwise WE.",
+      "Rows with no suitable physical-unit BONSAI factor are retained in the DPP but excluded from the main total.",
+      "Direct emissions are retained as inventory information; only fossil CO2 mass is reported separately, not added to the BONSAI process/object total.",
+      "Wastewater treatment is provided as sensitivity/excluded because SI2 marks it as an outlier with conversion factor 0.",
+      "The wafer row uses a rough M_ONMM proxy; a separate wafer DPP would be more defensible.",
+      "Direct emission rows are mapped to Biosphere3 vocabulary using SI2 - conversions used.xlsx, sheet emissions; they remain separate from the BONSAI process/object total.",
+      "Reference output is one discrete 210 x 210 mm PV cell; all inventory amounts and impacts were rescaled from the original 1 m2 cell-area inventory by 0.0441."
+    ],
+    "rescaling": {
+      "sourceReferenceFlow": "1 m2 photovoltaic cell, single-Si, at plant, CN",
+      "targetReferenceFlow": "1 photovoltaic cell, single-Si, 210 x 210 mm, at plant, CN",
+      "cellWidthMm": 210,
+      "cellHeightMm": 210,
+      "cellAreaM2": 0.04409999999999999,
+      "scalingFactorAppliedToInventoryAndImpacts": 0.04409999999999999
+    }
+  },
+  "directEmissions": {
+    "vocabulary": "biosphere3",
+    "source": "SI2 - conversions used.xlsx::emissions",
+    "interpretation": "Direct emissions are elementary flows retained in the DPP. They are vocabulary-mapped here but are not included in the BONSAI process/object lookup total unless a characterization factor workflow is added.",
+    "count": 18,
+    "mappedCount": 18,
+    "unmappedCount": 0,
+    "reportedDirectFossilCO2Tonnes": 0.00000735724852071006,
+    "rows": [
+      {
+        "description": "Heat, waste",
+        "compartment": "air, high population density",
+        "quantity": 2.28328402366864,
+        "unit": "MJ",
+        "biosphere3Name": "Heat, waste",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "b411ec8b-c60a-4235-a3b2-8bf8443cbc55",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Water, CN",
+        "compartment": "air, unspecified",
+        "quantity": 0.753846153846154,
+        "unit": "kg",
+        "biosphere3Name": "Water",
+        "biosphere3Compartment": "('air',)",
+        "biosphere3Uuid": "075e433b-4be4-448e-9510-9a5029c1ce94",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Aluminium",
+        "compartment": "air, high population density",
+        "quantity": 3.40680473372781e-7,
+        "unit": "kg",
+        "biosphere3Name": "Aluminium III",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "6f0b8b7c-3888-4174-b7e3-916d42d678ee",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Hydrogen fluoride",
+        "compartment": "air, unspecified",
+        "quantity": 0.0000060887573964497,
+        "unit": "kg",
+        "biosphere3Name": "Hydrogen fluoride",
+        "biosphere3Compartment": "('air',)",
+        "biosphere3Uuid": "24541c8c-9f11-49ae-9de5-456f238a3f5e",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Lead",
+        "compartment": "air, high population density",
+        "quantity": 3.40680473372781e-7,
+        "unit": "kg",
+        "biosphere3Name": "Lead II",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "6a903634-c97f-4c49-a7c0-88f0e6ac7a23",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Silicon",
+        "compartment": "air, high population density",
+        "quantity": 1.39715236686391e-9,
+        "unit": "kg",
+        "biosphere3Name": "Silicon",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "997dccfb-6574-46b8-ad93-7f31074abf9a",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Silver",
+        "compartment": "air, high population density",
+        "quantity": 3.40680473372781e-7,
+        "unit": "kg",
+        "biosphere3Name": "Silver I",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "c6462d84-caa9-425a-a923-45238690c6f3",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Tin",
+        "compartment": "air, high population density",
+        "quantity": 3.40680473372781e-7,
+        "unit": "kg",
+        "biosphere3Name": "Tin ion",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "19b6e569-85a4-4ea9-a590-d61a21e3c846",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Ammonia",
+        "compartment": "air, high population density",
+        "quantity": 0.00000164541420118343,
+        "unit": "kg",
+        "biosphere3Name": "Ammonia",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "9990b51b-7023-4700-bca0-1a32ef921f74",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Carbon dioxide, fossil",
+        "compartment": "air, high population density",
+        "quantity": 0.00735724852071006,
+        "unit": "kg",
+        "biosphere3Name": "Carbon dioxide, fossil",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "f9749677-9c9f-4678-ab55-c607dfdc2cb9",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Chlorine",
+        "compartment": "air, high population density",
+        "quantity": 0.00000202958579881657,
+        "unit": "kg",
+        "biosphere3Name": "Chlorine",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "247ac273-60fa-4e21-9408-793f75fa1d37",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Hydrogen",
+        "compartment": "air, high population density",
+        "quantity": 0.000485650887573964,
+        "unit": "kg",
+        "biosphere3Name": "Hydrogen",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "8e906def-6bd5-4248-ac2b-94e6eedde3c9",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "2-Propanol",
+        "compartment": "air, high population density",
+        "quantity": 0.000648742603550296,
+        "unit": "kg",
+        "biosphere3Name": "2-Propanol",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "cbf58f64-9286-406f-8dcb-ef1d81eec980",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Acetaldehyde",
+        "compartment": "air, high population density",
+        "quantity": 0.0000279068047337278,
+        "unit": "kg",
+        "biosphere3Name": "Acetaldehyde",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "5ad58fcc-e9ba-4155-a3c9-e4ffb3065a6f",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Ethane, 1,1,1,2-tetrafluoro-, HFC-134a",
+        "compartment": "air, high population density",
+        "quantity": 0.00000137540680473373,
+        "unit": "kg",
+        "biosphere3Name": "Ethane, 1,1,1,2-tetrafluoro-, HFC-134a",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "fa0c2bee-8dd9-4f8a-8489-b1f3b43de958",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Silicon",
+        "compartment": "air, high population density",
+        "quantity": 0.0000146782544378698,
+        "unit": "kg",
+        "biosphere3Name": "Silicon",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "997dccfb-6574-46b8-ad93-7f31074abf9a",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "Silicon",
+        "compartment": "air, high population density",
+        "quantity": 0.000115976331360947,
+        "unit": "kg",
+        "biosphere3Name": "Silicon",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "997dccfb-6574-46b8-ad93-7f31074abf9a",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      },
+      {
+        "description": "NMVOC, non-methane volatile organic compounds, unspecified origin",
+        "compartment": "air, high population density",
+        "quantity": 0.000556323964497041,
+        "unit": "kg",
+        "biosphere3Name": "NMVOC, non-methane volatile organic compounds",
+        "biosphere3Compartment": "('air', 'urban air close to ground')",
+        "biosphere3Uuid": "175baa64-d985-4c5e-84ef-67cc3a1cf952",
+        "mappingStatus": "mapped",
+        "calculationStatus": "not calculated"
+      }
+    ]
+  }
+}
