@@ -241,19 +241,40 @@ td textarea { min-height: 44px; }
 .btn.small { min-height: 32px; padding: var(--space-1) var(--space-2); font-size: 12px; }
 .btn.full-width { width: 100%; margin-top: var(--space-4); }
 .btn:disabled { opacity: 0.6; cursor: not-allowed; box-shadow: none; }
-.guide-download { text-decoration: none; }
-.guide-download-block {
+.guide-download { text-decoration: none; min-width: 132px; }
+.guide-download-card {
+  border: 1px solid #bfd5ce;
+  border-radius: var(--radius-surface);
+  background: #f6fbf9;
+  padding: var(--space-3);
   display: grid;
-  justify-items: end;
-  gap: var(--space-1);
-  max-width: 560px;
+  grid-template-columns: minmax(180px, 1fr) auto;
+  gap: var(--space-2) var(--space-3);
+  align-items: center;
+  max-width: 720px;
+  box-shadow: var(--shadow-soft);
 }
-.guide-download-block span {
+.guide-download-card strong {
+  display: block;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.2;
+}
+.guide-download-card div > span {
+  display: block;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.35;
-  text-align: right;
+  margin-top: 2px;
 }
+.guide-download-card p {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #4f5d57;
+  font-size: 11px;
+  line-height: 1.35;
+}
+.guide-download-card p span { color: #2f3d38; font-weight: 650; overflow-wrap: anywhere; }
 .flow-list { margin: var(--space-4) 0 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
 .flow-list li { display: grid; grid-template-columns: 24px 1fr; gap: var(--space-2); color: #33413c; font-size: 13px; line-height: 1.35; }
 .flow-list li::before { content: counter(list-item); display: grid; place-items: center; width: 24px; height: 24px; border-radius: 999px; background: #dfe9e5; color: var(--teal-dark); font-weight: 800; font-size: 12px; }
