@@ -241,7 +241,19 @@ td textarea { min-height: 44px; }
 .btn.small { min-height: 32px; padding: var(--space-1) var(--space-2); font-size: 12px; }
 .btn.full-width { width: 100%; margin-top: var(--space-4); }
 .btn:disabled { opacity: 0.6; cursor: not-allowed; box-shadow: none; }
-.guide-download { text-decoration: none; background: #fff; }
+.guide-download { text-decoration: none; }
+.guide-download-block {
+  display: grid;
+  justify-items: end;
+  gap: var(--space-1);
+  max-width: 560px;
+}
+.guide-download-block span {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: right;
+}
 .flow-list { margin: var(--space-4) 0 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
 .flow-list li { display: grid; grid-template-columns: 24px 1fr; gap: var(--space-2); color: #33413c; font-size: 13px; line-height: 1.35; }
 .flow-list li::before { content: counter(list-item); display: grid; place-items: center; width: 24px; height: 24px; border-radius: 999px; background: #dfe9e5; color: var(--teal-dark); font-weight: 800; font-size: 12px; }
