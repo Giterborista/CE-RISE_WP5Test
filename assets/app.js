@@ -31,7 +31,6 @@ let directEmissionByName = new Map();
 const $ = (id) => document.getElementById(id);
 const fmtNumber = (value) => Number(value || 0).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 const fmtKg = (tonnes) => `${fmtNumber(Number(tonnes || 0) * 1000)} kg CO2e`;
-const fmtTonnes = (tonnes) => `${fmtNumber(tonnes)} t CO2e`;
 const fmtQuantity = (amount, unit = "") => {
   if (amount === undefined || amount === null || amount === "") return "-";
   const number = Number(amount);
@@ -1017,9 +1016,9 @@ function renderResults() {
     <td>${escapeHtml(row.stage)}</td>
     <td>${escapeHtml(fmtQuantity(row.quantity, row.unit))}</td>
     <td>${escapeHtml(row.activityType === "Direct emission" ? directEmissionMappingText(row) : row.footprintLabel || row.footprintCode || "-")}</td>
-    <td>${fmtTonnes(row.ownImpactTonnesCO2eq)}</td>
-    <td>${fmtTonnes(row.linkedImpactTonnesCO2eq)}</td>
-    <td>${fmtTonnes(row.totalImpactTonnesCO2eq)}</td>
+    <td>${fmtKg(row.ownImpactTonnesCO2eq)}</td>
+    <td>${fmtKg(row.linkedImpactTonnesCO2eq)}</td>
+    <td>${fmtKg(row.totalImpactTonnesCO2eq)}</td>
     <td>${escapeHtml(row.status)}</td>
     <td>${escapeHtml(row.warnings.join("; "))}</td>
   </tr>`).join("");
