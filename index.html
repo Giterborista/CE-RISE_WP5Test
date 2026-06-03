@@ -10,43 +10,41 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-preview.svg" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/styles.css?v=20260531-guide-card-2" />
+  <link rel="stylesheet" href="assets/styles.css?v=20260603-logo-clean-1" />
 </head>
 <body>
-  <header class="app-header">
-    <div class="header-inner">
-      <div class="brand-block">
-        <button class="brand-mark" id="brandMark" type="button" title="Double-click to open the EoL actor scenario">PV</button>
-        <div>
-          <div class="eyebrow">CERISE DPP workshop</div>
+  <div class="app-shell">
+    <aside class="brand-rail" aria-label="CE-RISE workshop navigation">
+      <div class="rail-brand">
+        <a class="brand-mark" href="https://ce-rise.eu" target="_blank" rel="noopener noreferrer" aria-label="Open CE-RISE website">
+          <img src="assets/logo-mono.png" alt="CE-RISE" />
+        </a>
+        <div class="rail-copy">
+          <button class="eyebrow scenario-trigger" id="scenarioTrigger" type="button" title="Triple-click to open the EoL actor scenario">DPP workshop</button>
           <h1>PV Panel Passport Builder</h1>
+          <div class="header-subtitle">Digital Product Passport exercise for circular product data and impact calculation.</div>
           <div class="header-meta" id="lookupMeta">Loading database lookup...</div>
         </div>
       </div>
-      <div class="header-actions">
+
+      <nav class="nav-tabs stepper" aria-label="Workshop sections" role="tablist">
+        <button class="tab-btn active" type="button" data-tab="setup" role="tab" aria-selected="true"><span class="step-number">1</span><span class="step-label">Process setup</span></button>
+        <button class="tab-btn" type="button" data-tab="inventory" role="tab" aria-selected="false"><span class="step-number">2</span><span class="step-label">Inventory</span></button>
+        <button class="tab-btn" type="button" data-tab="results" role="tab" aria-selected="false"><span class="step-number">3</span><span class="step-label">Results</span></button>
+        <button class="tab-btn" type="button" data-tab="export" role="tab" aria-selected="false"><span class="step-number">4</span><span class="step-label">Export</span></button>
+      </nav>
+
+      <div class="rail-credit">
         <a class="credit-badge" href="https://bonsai.uno" target="_blank" rel="noopener noreferrer" aria-label="BONSAI database attribution. Licensed under Creative Commons Attribution 4.0 International.">
-          <span class="credit-logo" aria-hidden="true">BONSAI</span>
-          <span class="credit-copy">Lookup data from BONSAI. Licensed under CC BY 4.0 International.</span>
+          <img class="credit-logo" src="assets/bonsai_logo-DQorZpYj.webp" alt="BONSAI" />
+          <span class="credit-copy">Lookup data licensed under CC BY 4.0 International.</span>
         </a>
       </div>
-    </div>
-  </header>
 
-  <main>
-    <nav class="nav-tabs stepper" aria-label="Workshop sections" role="tablist">
-      <button class="tab-btn active" type="button" data-tab="setup" role="tab" aria-selected="true"><span class="step-number">1</span><span class="step-label">Process setup</span></button>
-      <button class="tab-btn" type="button" data-tab="inventory" role="tab" aria-selected="false"><span class="step-number">2</span><span class="step-label">Inventory</span></button>
-      <button class="tab-btn" type="button" data-tab="results" role="tab" aria-selected="false"><span class="step-number">3</span><span class="step-label">Results</span></button>
-      <button class="tab-btn" type="button" data-tab="export" role="tab" aria-selected="false"><span class="step-number">4</span><span class="step-label">Export</span></button>
-    </nav>
+      <p class="rail-note">CE-RISE | Circular Economy Resource Information System</p>
+    </aside>
 
-    <section class="workspace-status" aria-label="Workshop status">
-      <div class="status-item"><span class="status-label">Database</span><strong id="statusDatabase">Loading</strong></div>
-      <div class="status-item"><span class="status-label">Inventory rows</span><strong id="statusRows">0</strong></div>
-      <div class="status-item"><span class="status-label">Calculated rows</span><strong id="statusCalculated">0</strong></div>
-      <div class="status-item"><span class="status-label">Total impact</span><strong id="statusTotal">0 kg CO2e</strong></div>
-    </section>
-
+    <main class="app-main">
     <section class="panel active" id="setupPanel">
       <div class="section-title">
         <div>
@@ -147,7 +145,8 @@
       </div>
       <textarea id="exportPreview" class="export-area" spellcheck="false"></textarea>
     </section>
-  </main>
+    </main>
+  </div>
 
   <div class="modal hidden" id="dppViewer" role="dialog" aria-modal="true" aria-labelledby="dppViewerTitle">
     <div class="modal-panel">
@@ -162,6 +161,6 @@
     </div>
   </div>
 
-  <script type="module" src="assets/app.js?v=20260531-table-kg-1"></script>
+  <script type="module" src="assets/app.js?v=20260603-logo-clean-1"></script>
 </body>
 </html>

@@ -1146,9 +1146,10 @@ function installEvents() {
   document.querySelectorAll(".tab-btn").forEach((button) => {
     button.addEventListener("click", () => switchTab(button.dataset.tab));
   });
-  $("brandMark")?.addEventListener("dblclick", async () => {
-    const button = $("brandMark");
-    setButtonBusy(button, true, "EoL");
+  $("scenarioTrigger")?.addEventListener("click", async (event) => {
+    if (event.detail < 3) return;
+    const button = $("scenarioTrigger");
+    setButtonBusy(button, true, "Opening EoL");
     try {
       await loadEolScenario();
     } catch (error) {
